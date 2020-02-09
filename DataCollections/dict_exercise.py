@@ -11,5 +11,32 @@ products = [
     {"p_name":"Asus Zenbook","brand":"Asus","Category":"Laptop","price":88000},
     ]
 
-
 search = input("Enter your search : ")
+search = search.lower()
+searchProducts = []
+for i in range(len(products)):
+    cond_1 = search in products[i]['Category'].lower()
+    cond_2 = search in products[i]['brand'].lower()
+    cond_3 = search in products[i]['p_name'].lower()
+    if cond_1 or cond_2 or cond_3:
+        print(products[i])
+        searchProducts.append(products[i])
+
+print("""
+Sort Products by Price : 
+1. Low to High
+2. High to Low
+""")
+ch = input("Enter your choice : ")
+
+def sort_by_price(x):
+    return x['price']
+
+if ch == "1":
+    data = sorted(searchProducts,key=sort_by_price)
+else:
+    data = sorted(searchProducts,key=sort_by_price,reverse=True)
+
+for i in range(len(data)):
+    print(data[i]['p_name'],data[i]['brand'],data[i]['price'])
+
