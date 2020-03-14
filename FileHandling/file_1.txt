@@ -1,0 +1,30 @@
+File Handling
+- Text
+- Binary
+
+3 steps to perform file handling
+1. Open
+2. Read/Write
+3. Close
+
+Modes of file handling
+- r/w/a    => read/write/append (text)
+- rb/wb/ab => readBinary/writeBinary/appendBinary (binary)
+- r+/w+/a+ => read + write 
+
+
+
+Exception Handling
+
+- BaseException
+  - Exception
+    - Arithmetic Error
+      - ZeroDivisionError
+
+try      - write down your logic in this block
+except   - handle the exception in this block
+else     - either except will execute or else will
+finally  - it will always execute
+
+
+
